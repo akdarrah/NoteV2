@@ -1,0 +1,10 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+public/system
+config/database.yml
+config/last_fm.yml
+config/youtube.yml
+.rvmrc
+.sass-cache

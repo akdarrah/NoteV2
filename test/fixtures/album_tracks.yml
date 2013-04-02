@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  album: 
+  track: 
+  position: 1
+
+two:
+  album: 
+  track: 
+  position: 1

@@ -1,0 +1,16 @@
+.sidebar
+  #video_player_container
+    #ytapiplayer
+      You need Flash player 8+ and JavaScript enabled to view this video.
+  #music_player
+    #currently_playing.center
+      #current-artist-name
+      %h3#current-track-name
+      #current-album-name
+    #sound_controller.center
+      = link_to bootstrap_icon("icon-backward"), "#", {:class => "btn", :id => "player-prev"}
+      = link_to bootstrap_icon("icon-play"), "#", {:class => "btn", :id => "player-play"}
+      = link_to bootstrap_icon("icon-forward"), "#", {:class => "btn", :id => "player-next"}
+    %ol.track_queue#primary-track-queue
+  = image_tag("title.png", :id => "sidebar-title")
+

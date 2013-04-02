@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  artist: 
+  released_at: 2011-10-03 21:42:40
+
+two:
+  name: MyString
+  artist: 
+  released_at: 2011-10-03 21:42:40

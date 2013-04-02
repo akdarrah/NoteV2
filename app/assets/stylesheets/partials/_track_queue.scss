@@ -1,0 +1,77 @@
+ol.track_queue {
+  padding: 10px 0;
+  width: $sidebar-width !important;
+  list-style-type: none;
+
+  .track_now_playing {
+    @include shadow(2px, 4px, 5px, $shadow-color);
+  }
+
+  .hover_style {
+    margin-right: 17px !important;
+    padding-right: 5px !important;
+    @include shadow(2px, 4px, 5px, $shadow-color);
+  }
+
+  li.row {
+    width: 306px;
+    margin: 0 auto;
+    padding: 0px;
+    position: relative;
+    border-bottom: 1px solid $border-color;
+
+    .cover_art img {
+      margin: 5px;
+      height: 40px;
+      float: left;
+      @include shadow(1px, 2px, 5px, $shadow-color);
+    }
+
+    .track_labels {
+      width: 240px;
+      margin: 5px;
+      float: left;
+
+      .track_name {
+        font-weight: bold;
+      }
+
+      .track_name, .context_name {
+        @include ellipsis(240px);
+      }
+    }
+
+    &:hover {
+      margin-right: 17px;
+      padding-right: 5px;
+      @include shadow(2px, 4px, 5px, $shadow-color);
+    }
+  }
+}
+
+#music_player {
+  #primary-track-queue {
+    height: 310px;
+    overflow: hidden;
+    margin: 10px 0 15px 0;
+    padding: 0 !important;
+
+    .playable_track:last-child {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+#viewport {
+  .track_queue {
+    border: 1px solid $border-color;
+    background: $darker-gray-color !important;
+    overflow: scroll;
+    float: left;
+    height: 100%;
+
+    .playable_track:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}

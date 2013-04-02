@@ -1,0 +1,11 @@
+- content_for :script do
+  %script{:type => "text/x-handlebars-template", :id => "album-model-template"}
+    .album_summary
+      .page_title_block
+        .corner_image
+          %img{:alt => "{{to_s}}", :src => "{{cover_art_url}}"}
+        .meta_info
+          %h4 {{to_s}}
+          %h5 {{#artist}}by <a href="/artists/{{id}}">{{to_s}}</a>{{/artist}}
+          %p {{{description}}}
+      %hr

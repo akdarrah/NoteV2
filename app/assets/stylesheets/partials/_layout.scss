@@ -1,0 +1,43 @@
+html {width: 100%; height: 100%;}
+body {width: 100%; height: 100%;} 
+.container-fluid {width: 100%; height: 100%; margin: 0; padding: 0;}
+.row-fluid {width: 100%; height: 100%;}
+
+.clickable {@include clickable;}
+.small {font-size: 11px;}
+.center{text-align: center;}
+
+#viewport {
+  // should use jquery to resize this for better positioning with 20px padding on top and bottom
+  margin-left: $sidebar-width + 20px !important;
+  height: 92%;
+  margin-top: 20px;
+
+  #content {
+    border-top: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    background: $lighter-gray-color;
+    min-width: 1px;
+    max-width: 600px;
+    overflow: hidden;
+    padding: 10px;
+    height: 100%;
+    overflow: scroll;
+
+    -moz-border-radius-topright: 3px;
+    border-top-right-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-bottom-right-radius: 3px;
+
+    .breadcrumb{
+      a {
+        display: inline-block;
+        max-width: 170px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+!!! Strict
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{:content => "text/html;charset=utf-8", "http-equiv" => "Content-Type"}
+    %meta{:name => "title", :content => "Note V2 Console"}
+    %meta{:name => "description", :content => "Listen to free music, generate custom playlists, and discover new artists on Notemare! Powered by Youtube and Last.fm."}
+    %meta{:name => "keywords", :content => "free music, listen to music, playlist, music playlist, online radio, free mp3, discover music, music, online music, music downloads, playlist generator"}
+    %link{:rel => 'shortcut icon', :href => "/assets/favicon.ico", :type => "image/x-icon" }
+    = stylesheet_link_tag "base"
+    = csrf_meta_tag
+    %title Note V2
+  %body
+    .container-fluid
+      .row-fluid
+        .span2= render :partial => "/layouts/music_player"
+        .span7#viewport
+          %ol.track_queue#secondary-track-queue
+          #content
+            %ul.breadcrumb
+            #page_content
+              = yield
+  = include_gon
+  = javascript_include_tag "base"
+  - render :partial => "/layouts/templates/templates"
+  = yield :script

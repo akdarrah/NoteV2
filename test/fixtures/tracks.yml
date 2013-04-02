@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  album: 
+  name: MyString
+  duration: 1
+  position: 1
+
+two:
+  album: 
+  name: MyString
+  duration: 1
+  position: 1

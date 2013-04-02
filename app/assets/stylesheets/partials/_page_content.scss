@@ -1,0 +1,31 @@
+#page_content {
+  .page_title_block {
+    @include clearfix;
+
+    .corner_image img {
+      float: left;
+      display: inline;
+      width: 200px;
+      @include shadow(2px, 4px, 5px, $shadow-color);
+      margin: 0 10px 5px 0;
+    }
+
+    .meta_info {
+      min-height: 100px;
+      h4 { margin-bottom: 4px; }
+      p { margin: 10px 0 0 0; }
+    }
+  }
+
+  .img_collage {
+    margin: 10px 0 0 0;
+
+    img {
+      @include clickable;
+      height: 24px;
+      width: 24px;
+      margin-bottom: 3px;
+    }
+  }
+
+}

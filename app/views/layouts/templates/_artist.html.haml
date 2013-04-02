@@ -1,0 +1,24 @@
+- content_for :script do
+  %script{:type => "text/x-handlebars-template", :id => "artist-model-template"}
+    .artist_summary
+      .page_title_block
+        .corner_image
+          %img{:alt => "{{to_s}}", :src => "{{photo_url}}"}
+        .meta_info
+          %h4 {{to_s}}
+          %p {{{description}}}
+      %hr
+      %h6 {{count albums}} Albums by {{to_s}}
+      .img_collage
+        {{#each albums}}
+        %a{:href => "/artists/{{artist_id}}/albums/{{id}}"}
+          %img{:alt => "{{to_s}}", :src =>"{{cover_art_thumb_url}}", :data => {'original-title' => "{{to_s}}"}, :class => "bootstrap-tooltip", :rel => 'tooltip'}
+        {{/each}}
+      %hr
+      %h6 {{count similar_artists}} Similar artists to {{to_s}}
+      .img_collage
+        {{#each similar_artists}}
+        %a{:href => "/artists/{{id}}"}
+          %img{:alt => "{{to_s}}", :src =>"{{photo_url}}", :data => {'original-title' => "{{to_s}}"}, :class => "bootstrap-tooltip", :rel => 'tooltip'}
+        {{/each}}
+      %hr

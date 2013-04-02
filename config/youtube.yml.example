@@ -1,0 +1,5 @@
+# Youtube developer API key
+# LastFM API Key Credentials
+
+api_key: ''
+base_url: 'https://gdata.youtube.com/feeds/api/'

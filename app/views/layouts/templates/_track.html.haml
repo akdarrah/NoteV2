@@ -1,0 +1,27 @@
+- content_for :script do
+  %script{:type => "text/x-handlebars-template", :id => "track-model-template"}
+    .track_summary
+      .page_title_block
+        .corner_image
+          %img{:alt => "", :src =>"{{#album}}{{cover_art_url}}{{/album}}"}
+        .meta_info
+          %h4 {{to_s}}
+          %h5 {{#artist}}by <a href="/artists/{{id}}">{{to_s}}</a>{{/artist}}
+          %h5 {{#album}}on <a href="/artists/{{artist_id}}/albums/{{id}}">{{to_s}}</a>{{/album}}
+          %p {{#artist}}{{{summary}}}{{/artist}}
+      %hr
+      %h6 On {{count albums}} Albums By {{#artist}}{{to_s}}{{/artist}}
+      .img_collage
+        {{#each albums}}
+        %a{:href => "/artists/{{artist_id}}/albums/{{id}}"}
+          %img{:alt => "{{to_s}}", :src =>"{{cover_art_thumb_url}}", :data => {"original-title" => "{{to_s}}"}, :class => "bootstrap-tooltip", :rel => 'tooltip'}
+        {{/each}}
+      %hr
+
+  %script{:type => "text/x-handlebars-template", :id => "track-queue-template"}
+    %li.playable_track.row.clickable
+      .cover_art
+        %img{:alt => "", :src =>"{{#album}}{{cover_art_thumb_url}}{{/album}}"}
+      .track_labels
+        .track_name {{to_s}}
+        .context_name {{#album}}{{to_s}}{{/album}} - {{#artist}}{{to_s}}{{/artist}}

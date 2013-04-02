@@ -1,0 +1,28 @@
+@mixin shadow($h-off, $v-off, $blur, $col){
+  -moz-box-shadow: $h-off $v-off $blur $col;
+  -webkit-box-shadow: $h-off $v-off $blur $col;
+  box-shadow: $h-off $v-off $blur $col;
+}
+
+@mixin ellipsis($width){
+  max-width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin transparent($opacity){
+  opacity:$opacity/10;
+  filter:alpha(opacity=$opacity);
+}
+
+@mixin clearfix {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1;
+}
+
+@mixin clickable {
+  cursor:pointer;
+  cursor:hand;
+}
